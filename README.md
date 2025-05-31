@@ -14,6 +14,7 @@ A classic Snake game built using **HTML**, **CSS**, and **JavaScript**, utilizin
 
 -  Smooth animations with Canvas
 -  Keyboard controls (Arrow keys)
+-  High score tracking with `localStorage`
 -  Sound effects
 -  Clean Object-Oriented Code
 -  Including Pause/ Resume/ Restart Options
