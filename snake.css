@@ -1,0 +1,21 @@
+*{
+    color: white;
+    background-color: black;
+}
+
+#game-board{
+    border: 5px solid rgb(121, 66, 66);
+    border-radius: 5px;
+}
+#game-container{
+    border: 1px solid white;
+    border-radius: 10px;
+}
+.pop-up{
+    position: relative;
+    bottom: 200px;
+    color: #ffffff;
+}
+p{
+    font-size: smaller;
+}
