@@ -140,6 +140,7 @@ function gameLoop(){
             ateSound.currentTime = 0
             ateSound.play()
             food.createFood(snake.snake)
+            localStorageUpdate(score)
         }
         if(snake.hasCollided() || snake.hasHittedWall()){
             gameOverSound.play()
@@ -218,7 +219,10 @@ function restartPopUp(){
     popUp.append(btn1, btn2)
     gameContainer.append(popUp)
 
-    btn1.addEventListener('click', () => location.reload())
+    btn1.addEventListener('click', () =>{
+        localStorageUpdate(score)
+        location.reload()
+    })
     btn2.addEventListener('click', removePopUp)
 
     function removePopUp(){
@@ -235,11 +239,20 @@ function gamePauseMsg(){
 
 function endGame(){
     clearInterval(loop)
+    localStorageUpdate(score)
     gameOver = true
     ctx.fillStyle = 'white'
     ctx.font = "bold 50px serif"
     ctx.textAlign = 'center'
     ctx.fillText('Game Over !', gameBoard.width / 2, gameBoard.height / 2)
 }
+function localStorageUpdate(score) {
+    const highScore = localStorage.getItem('high-score');
+    if (!highScore || score > parseInt(highScore)) {
+        localStorage.setItem('high-score', score);
+    }
+    document.getElementById('high-score').innerHTML = `High Score : ${highScore}`
+}
+localStorageUpdate(score)
 
 window.addEventListener('keydown', eventCheck)
