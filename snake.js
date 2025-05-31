@@ -130,6 +130,7 @@ function gameLoop(){
     if(gameOver || !started) return
     loop = setInterval(() => {
         scoreBoard.textContent = `Score : ${score}`
+        localStorageUpdate(score)
         clearBoard();
 
         let head = snake.snake[snake.snake.length - 1]
@@ -140,7 +141,6 @@ function gameLoop(){
             ateSound.currentTime = 0
             ateSound.play()
             food.createFood(snake.snake)
-            localStorageUpdate(score)
         }
         if(snake.hasCollided() || snake.hasHittedWall()){
             gameOverSound.play()
