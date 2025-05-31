@@ -85,7 +85,7 @@ const gameContainer = document.getElementById('game-container')
 const gameBoard = document.getElementById('game-board');
 let scoreBoard = document.getElementById('score');
 
-const ateSound = new Audio('/Sounds/byte.mp3')
+const ateSound = new Audio('./Sounds/byte.mp3')
 ateSound.preload = 'auto'
 
 const gameOverSound = new Audio('./Sounds/gameOver.mp3')
