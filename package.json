@@ -1,0 +1,21 @@
+{
+  "name": "snake-game-using-canvas",
+  "version": "1.0.0",
+  "description": "A classic Snake game built using **HTML**, **CSS**, and **JavaScript**, utilizing the HTML5 **Canvas API** and an **Object-Oriented Approach** for clean structure and smooth gameplay.",
+  "main": "snake.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Sanjai0412/Snake-Game-using-Canvas.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/Sanjai0412/Snake-Game-using-Canvas/issues"
+  },
+  "homepage": "https://github.com/Sanjai0412/Snake-Game-using-Canvas#readme"
+}
